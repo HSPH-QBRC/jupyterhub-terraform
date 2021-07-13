@@ -3,7 +3,7 @@
 This repository contains files and helper scripts which will setup a JupyterHub instance on a GCP VM.
 
 #### Instructions
-
+- Install [git](https://git-scm.com), [Google Cloud SDK](https://cloud.google.com/sdk/docs/install) and [Terraform](https://www.terraform.io/downloads.html)
 - Clone this repository
 - Create a service account key file using the GCP console or via command line. This service account file should have privileges to create networks and VMs. The easiest is probably to assign it "editor" privileges. Download the resulting JSON-format file to your cloned directory.
     - To do this via commandline, run: 
