@@ -5,7 +5,14 @@ set -x
 
 cd /opt
 apt-get update 
-apt-get install -y python3-venv python3-pip nginx git
+apt-get install -y \
+    pkg-config \
+    libcairo2-dev \
+    python3-venv \
+    python3-pip \
+    nginx \
+    git \
+    pkg-config
 
 git clone https://github.com/HSPH-QBRC/jupyterhub-terraform.git
 
