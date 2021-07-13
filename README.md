@@ -9,6 +9,9 @@ This repository contains files and helper scripts which will setup a JupyterHub 
     - To do this via commandline, run: 
 ```
 gcloud iam service-accounts create <NAME> --display-name="<SOME NAME>"
+gcloud projects add-iam-policy-binding <GCP project name> \ 
+    --member='serviceAccount:<NAME>@<GCP project name>.iam.gserviceaccount.com' \ 
+    --role='roles/editor'
 gcloud iam service-accounts keys create key.json --iam-account=<NAME>@<GCP project name>.iam.gserviceaccount.com
 ```
 - Copy the terraform variable template file: `cp terraform.tfvars.tmpl terraform.tfvars` and fill-in the variables. The `credentials_file` variable is the name of the JSON-format service account key file you just created/downloaded.
