@@ -30,7 +30,7 @@ Note that visting that address will prompt for a login. As set up, the JupyterHu
 
 The repository also comes with a helper script (`add_users.sh`). This allows us to add new system users (which effectively creates a login for JupyterHub) and to copy any common files that might need to be shared with all course participants. The script assumes the data is located in `/home/common_data`. If there is no common data to share, then the copy commands will just fail.
 
-To run the script, create a basic text file where each line has 3 elements delimited by a comma:
+To run the script, you first have to SSH to the machine. Then, create a basic text file where each line has 3 elements delimited by a comma:
 - email address
 - a username (needs to be Unix valid!)
 - a plain text password
