@@ -14,6 +14,10 @@ gcloud projects add-iam-policy-binding <GCP project name> \
     --role='roles/editor'
 gcloud iam service-accounts keys create key.json --iam-account=<NAME>@<GCP project name>.iam.gserviceaccount.com
 ```
+where `<NAME>` is the name of your service account (which has some regex-based restrictions, so keep it simple) and `<GCP project name>` is the *name* of your GCP project (not the numerical ID).
+
+Running those commands will download a file named `key.json` to your current working directory. BE CAREFUL WITH THAT KEY!! The `.gitignore` will ignore "*.json" files, which is hopefully enough of a barrier to prevent accidental commits.
+
 - Copy the terraform variable template file: `cp terraform.tfvars.tmpl terraform.tfvars` and fill-in the variables. The `credentials_file` variable is the name of the JSON-format service account key file you just created/downloaded.
 - `terraform init`
 - `terraform apply`
